@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/DroidKufi-Regular.eot),
+        url(../fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+
+/**** Start scroll bar ***/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display:none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom,  #79a05f 0%,#6d9055 100%); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6d9055; 
+}
+/**** End scroll bar ***/
+
+html{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.site-name{
+    font-size: 26px; 
+    font-weight: bold
+}
+
+.app-arabic-font {
+    font-family: 'Droid Arabic Kufi', serif !important;
+}
+
+.main-application{
+    overflow-x: hidden;
+}
+
+.v-application .display-3, .v-application .display-2, .v-application .display-1, 
+.v-application .headline, .v-application .subtitle-1, .v-application .title,
+.v-application .subtitle-2 {
+    font-family: 'Droid Arabic Kufi', serif !important;
+}
+
+.word-break{
+    word-break: break-all;
+}
+
+/* fix container size */
+.container--fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (min-width: 576px) {
+    .container:not(.container--fluid) {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container:not(.container--fluid) {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container:not(.container--fluid) {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container:not(.container--fluid) {
+        max-width: 1140px;
+    }
+}
+
+/* end container size */
+
+/* Borders */
+.border-bottom{
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.border-top{
+    border-top: 1px solid #dee2e6 !important;
+}
+/*  */
+
+/* underline */
+.remove-underline{
+    text-decoration:none;
+}
+/* */
+
+/* ribbon */
+.ribbon{
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: -100;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
+.ribbon span{
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-315deg);
+    -webkit-transform: rotate(-315deg);
+    width: 100px;
+    display: block;
+    background: #dc3545;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px;
+    right: -21px;
+}
+.ribbon.right {
+    left: -5px;
+    right: initial;
+}
+
+.ribbon.right span {
+    right: initial;
+    left: -21px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #dc3545;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #dc3545;
+}
+
+.ribbon span::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #dc3545;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #dc3545;
+}
+/* end of ribbon */
+
+/* Cursor Icons */
+.no-cursor{
+    cursor: none;
+}
